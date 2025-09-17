@@ -48,5 +48,5 @@ java Main
 
 
 ## 📚 References
-- Oracle Docs – Records
-- Baeldung – Introduction to Java Records
+- [Oracle Docs – Records](https://docs.oracle.com/en/java/javase/17/language/records.html)
+- [Baeldung – Introduction to Java Records](https://www.baeldung.com/java-record-keyword)
