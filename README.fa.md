@@ -20,7 +20,8 @@
 ---
 
 ## 📌 مثال
-```java
+
+[//]: # (```java)
 public record Person(String name, int age) { }
 
 class Main {
@@ -31,4 +32,32 @@ class Main {
         System.out.println(p1.age());  // 30
         System.out.println(p1);        // Person[name=Ali, age=30]
     }
+}
+
+## نکته
+
+public record Person(String name, int age) { }
+
+معادل همین کد در کلاس معمولی تقریباً چنین می‌شد:
+
+public final class Person {
+private final String name;
+private final int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String name() { return name; }
+    public int age() { return age; }
+
+    @Override
+    public boolean equals(Object o) { /*...*/ }
+
+    @Override
+    public int hashCode() { /*...*/ }
+
+    @Override
+    public String toString() { /*...*/ }
 }
