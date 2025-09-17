@@ -62,3 +62,26 @@ private final int age;
     public String toString() { /*...*/ }
 }
 
+## 📌 امکانات اضافه
+- می‌توان متد یا constructor اضافی هم تعریف کرد:
+
+public record Rectangle(int width, int height) {
+public int area() {
+return width * height;
+}
+
+    // canonical constructor
+    public Rectangle {
+        if (width <= 0 || height <= 0) {
+            throw new IllegalArgumentException("Invalid size");
+        }
+    }
+}
+
+## 📌 محدودیت ها
+1. فیلدها همیشه final هستند.
+2. نمی‌شود به طور معمول setter تعریف کرد.
+3. record ها final هستند و نمی‌توان از آن‌ها ارث‌بری کرد.
+
+## 👉 خلاصه
+record برای DTOها (Data Transfer Objects)، Value Objects و هر جایی که فقط نیاز به نگه‌داشتن داده بدون منطق پیچیده باشد عالی است.
