@@ -37,6 +37,19 @@ class Main {
     }
 }
 
+record را همه جا می شود تعریف کرد که در مثال بالا یک موجودیت standalone تعریف شده
+اما record را میتوانیم به صورت embeded  داخل یک کلاس یا داخل یک متد تعریف کنیم که فقط همان متد یا همان کلاس به آن دسترسی داشته باشد
+
+public class Main {
+public static void main(String[] args) {
+
+        record Person(String name, String family){}
+
+        Person person = new Person("Monireh", "Jamshidi");
+    }
+}
+
+
 ## نکته
 
 public record Person(String name, int age) { }
